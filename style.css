@@ -1,0 +1,275 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(to bottom, #87ceeb, #4682b4);
+    height: 110vh;
+}
+
+.header {
+    display: flex;
+    height: 70px;
+  }
+
+  .head{
+    width: 1400px;
+    height: 50px;
+    margin-left: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-self: right;
+  }
+
+  .header .links {
+    position: relative;
+  }
+
+  .header .links:hover .icon span:nth-child(2) {
+    width: 100%;
+  }
+
+  .header .links .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  .header .links .icon span {
+    background-color: #000000;
+    margin-bottom: 5px;
+    height: 2px;
+  }
+
+  .header .links .icon span:first-child {
+    width: 100%;
+  }
+
+  .header .links .icon span:nth-child(2) {
+    width: 60%;
+    transition: var(--main-duration);
+  }
+
+  .header .links .icon span:last-child {
+    width: 100%;
+  }
+
+  .header .links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+    position: absolute;
+    right: 0;
+    min-width: 200px;
+    top: calc(100% + 15px);
+    display: none;
+    z-index: 1;
+  }
+
+  .header .links ul::before {
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+  }
+
+  .header .links:hover ul {
+    display: block;
+  }
+
+  .header .links ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: var(--main-duration);
+  }
+
+  .header .links ul li a:hover {
+    padding-left: 25px;
+  }
+
+  .header .links ul li:not(:last-child) a {
+    border-bottom: 1px solid #ddd;
+  }
+
+.timer-container {
+    width: 400px;
+    height: 200px;
+    margin: 40px auto;
+    background-color: #f0f0f0;
+    padding: 60px;
+    border: 1px solid #ddd;
+    border-radius: 700px 100px ;
+    box-shadow: 0 0 10px rgba(93, 2, 2, 0.1);
+    background: rgb(80, 161, 215);
+    border: 2px solid transparent;
+    justify-self: center;
+}
+
+@keyframes   p{
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+ p {
+  animation:  p 5s ease-in-out;
+}
+
+p {
+  animation: p 2s ease-in-out infinite; 
+}
+
+.timer {
+    font-family:'Times New Roman', Times, serif ;
+    font-size: 130px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    justify-self: center;
+}
+
+.controls {
+    justify-self: center;
+    margin-right: 70px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4c4eaf;
+    color: #fff;
+    cursor: pointer;
+    justify-content: space-between;
+    margin-left: 50px;
+    font-weight: 700;
+    font-family: serif;
+}
+
+button:hover {
+    background-color: #3436a5;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background-color: #9b9cec;
+    cursor: not-allowed;
+    color: black;
+    font-weight: 700;
+}
+
+.intervals {
+    margin-top: 40px;
+    margin-right: 90px;
+    justify-self: center;
+    display: flex;
+}
+
+label {
+    margin: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    margin-left: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+    height: 25px;
+    font-size: 17px;
+    border: 1px solid #b31edc;
+    border-radius: 15px 3px;
+    padding: 5px;
+    display: block;
+    margin-left: 40px;
+    background: #a0a1e4;
+}
+
+.everything p{
+  justify-self: center;
+  margin-right: 60px;
+  color: #6c6a6a;
+}
+
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .head {
+      width: 100%;
+      text-align: center;
+      font-size: 24px;
+  }
+
+  .timer-container {
+      width: 90%;
+      padding: 20px;
+      height: auto;
+    border-radius: 700px 100px ;
+  }
+
+  .timer {
+      font-size: 80px;
+  }
+
+  .controls {
+      margin-right: 20px;
+  }
+
+  button {
+      width: 80px;
+      height: 35px;
+      font-size: 14px;
+      margin-left: 20px;
+  }
+
+  .intervals {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+  }
+
+  input[type="number"] {
+      width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timer-container {
+      width: 90%;
+      padding: 15px;
+      height: auto;
+    border-radius: 700px 100px ;
+  }
+
+  .timer {
+      font-size: 60px;
+  }
+
+  button {
+      width: 70px;
+      height: 30px;
+      font-size: 12px;
+  }
+
+  input[type="number"] {
+      width: 50px;
+  }
+}
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1 class="head"> Temp⏱</h1>
+        <div class="container">
+            <div class="links">
+                <span class="icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <ul>
+                    <li><a href="help.html">❔Help</a></li>
+                    <li><a href="contact.html">☎ Contact us </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <section class="everything">
+    <h5 class="timer-container">
+        <div class="timer" id="timer">25:00</div>
+        <p>EVERY SECOND COUNTS! </p>
+    </section>
+    <div class="controls">
+        <button id="start-button">Start</button>
+        <button id="stop-button" disabled>Stop</button>
+        <button id="reset-button">Reset</button>
+    </div>
+</div>
+<div class="intervals">
+<table>
+    <tr>
+<td><label for="work-interval">Work Interval</label>
+<input type="number" id="work-interval" value="25"></td>
+<td>
+<label for="break-interval">Break Interval</label>
+<input type="number" id="break-interval" value="5"></td>
+</tr>
+</table>
+</div>
+
+    <audio id="notification-sound" src="notification.mp3"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
